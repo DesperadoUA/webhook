@@ -13,8 +13,9 @@ app.post('/', (req, res) => {
 	if (req.query.token !== token) {
 		return res.sendStatus(401)
 	}
+	const arrey = ['7882680']
 	console.log(req.body)
-	const data = {
+	const defoltReq = {
 		responses: [
 			{
 				type: 'randomText',
@@ -22,6 +23,15 @@ app.post('/', (req, res) => {
 			}
 		]
 	}
+	const customReq = {
+		responses: [
+			{
+				type: 'randomText',
+				messages: ['Hi!!!', 'Hello!!!']
+			}
+		]
+	}
+	const data = arrey.includes(req.body.userId) ? customReq : defoltReq
 	res.json(data)
 })
 app.get('/test', (req, res) => {
