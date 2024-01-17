@@ -29,7 +29,10 @@ app.post('/', (req, res) => {
 				type: 'randomText',
 				messages: ['Hi!!!', 'Hello!!!']
 			}
-		]
+		],
+		attributes: {
+			VIP: 'yes'
+		}
 	}
 	const data = arrey.includes(req.body.userId) ? customReq : defoltReq
 	res.json(data)
