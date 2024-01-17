@@ -2,7 +2,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express().use(bodyParser.json())
-const token = 'VERIFICATION_TOKEN'
+const token = 'Trgky678bhh87Rdc93bhhiyQ'
 app.get('/', (req, res) => {
 	if (req.query.token !== token) {
 		return res.sendStatus(401)
