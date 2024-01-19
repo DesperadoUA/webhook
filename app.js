@@ -1227,7 +1227,10 @@ app.post('/', (req, res) => {
 				type: 'randomText',
 				messages: ['Hi', 'Hello']
 			}
-		]
+		],
+		attributes: {
+			VIP: 'no'
+		}
 	}
 	const customReq = {
 		responses: [
