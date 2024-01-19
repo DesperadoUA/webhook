@@ -1243,7 +1243,7 @@ app.post('/', (req, res) => {
 			VIP: 'yes'
 		}
 	}
-	const data = arrIds.includes(req.body.attributes.default_PLAYERID) ? customReq : defaultReq
+	const data = arrIds.includes(parseInt(req.body.attributes.default_PLAYERID)) ? customReq : defaultReq
 	res.json(data)
 })
 app.get('/test', (req, res) => {
