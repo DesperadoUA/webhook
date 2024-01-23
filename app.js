@@ -1220,7 +1220,6 @@ app.post('/', (req, res) => {
 		9325884,
 		9051050
 	]
-	console.log(req.body)
 	const defaultReq = {
 		responses: [
 			{
