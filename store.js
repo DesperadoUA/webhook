@@ -1,5 +1,5 @@
 const testId = 8240105
-module.exports = ARR_IDS = [
+const ARR_IDS = [
 	testId,
 	8815791,
 	8870922,
@@ -1205,3 +1205,4 @@ module.exports = ARR_IDS = [
 	9325884,
 	9051050
 ]
+module.exports = new Set(ARR_IDS)

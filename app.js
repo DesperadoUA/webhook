@@ -1,6 +1,6 @@
 'use strict'
 const express = require('express')
-const ARR_IDS = require('./store.js')
+const IDS = require('./store.js')
 const bodyParser = require('body-parser')
 const app = express().use(bodyParser.json())
 const token = 'Trgky678bhh87Rdc93bhhiyQ'
@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
 			}
 		],
 		attributes: {
-			VIP: ARR_IDS.includes(parseInt(req.body.attributes.default_PLAYERID)) ? 'yes' : 'no'
+			VIP: IDS.has(parseInt(req.body.attributes.default_PLAYERID)) ? 'yes' : 'no'
 		}
 	}
 	res.json(response)
@@ -36,7 +36,7 @@ app.get('/test', (req, res) => {
 			}
 		],
 		attributes: {
-			VIP: ARR_IDS
+			VIP: IDS
 		}
 	}
 	res.json(data)
