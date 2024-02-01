@@ -15,12 +15,6 @@ app.post('/', (req, res) => {
 		return res.sendStatus(401)
 	}
 	const response = {
-		responses: [
-			{
-				type: 'randomText',
-				messages: ['Hi!!!', 'Hello!!!']
-			}
-		],
 		attributes: {
 			VIP: IDS.has(parseInt(req.body.attributes.default_PLAYERID)) ? 'yes' : 'no'
 		}
